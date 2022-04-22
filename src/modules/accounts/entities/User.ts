@@ -1,5 +1,6 @@
+import { Column, CreateDateColumn, Entity, PrimaryColumn} from "typeorm";
 import {v4 as uuidv4} from "uuid";
-import { Column, CreateDateColumn, Entity, PrimaryColumn}from "typeorm";
+
 
 @Entity("users")
 class User {
@@ -26,7 +27,7 @@ class User {
     isAdmin: boolean;
 
     @CreateDateColumn()
-    created_ate: Date;
+    created_at: Date;
 
     constructor() {
         if(!this.id){
